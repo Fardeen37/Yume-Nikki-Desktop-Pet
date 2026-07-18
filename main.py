@@ -156,24 +156,33 @@ class Pet(QWidget):
             painter.drawPixmap(0, 0, self.current_pixmap)
 
     def update_image(self):
+        filename = None
+        
         if self.state == "sleep":
             filename = f"{self.current_character}Sleep.png"
         elif self.state == "sit":
             filename = f"{self.current_character}Sit{self.frame}.png"
-            if not os.path.exists(os.path.join(self.image_path, filename)):
-                filename = f"{self.current_character}Sit1.png"
         elif self.state == "pinch":
             filename = f"{self.current_character}Pinch{self.frame}.png"
         elif self.state in ["bicycle", "knife", "flute", "umbrella", "snowwoman", "crick"]:
             state_cap = self.state.capitalize()
             filename = f"{self.current_character}{state_cap}{self.direction}{self.frame}.png"
-            if not os.path.exists(os.path.join(self.image_path, filename)):
-                filename = f"{self.current_character}{self.direction}{self.frame}.png"
         else:
             filename = f"{self.current_character}{self.direction}{self.frame}.png"
             
         filepath = os.path.join(self.image_path, filename)
         
+        # Fallback if the specific animation doesn't exist
+        if not os.path.exists(filepath):
+            fallback_frame = self.frame if self.frame <= 3 else 1
+            filename = f"{self.current_character}{self.direction}{fallback_frame}.png"
+            filepath = os.path.join(self.image_path, filename)
+            
+            # Ultimate fallback if direction frame doesn't exist
+            if not os.path.exists(filepath):
+                filename = f"{self.current_character}Down1.png"
+                filepath = os.path.join(self.image_path, filename)
+                
         if os.path.exists(filepath):
             pixmap = QPixmap(filepath)
             self.current_pixmap = pixmap.scaled(pixmap.width() * 2, pixmap.height() * 2, Qt.KeepAspectRatio, Qt.FastTransformation)
