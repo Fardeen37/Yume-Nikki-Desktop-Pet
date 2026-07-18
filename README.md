@@ -1,63 +1,99 @@
 <div align="center">
   <img src="Images/MadotsukiDown1.png" alt="Madotsuki Sprite" width="64"/>
-  <h1>✨ Yume Nikki AI Pet ✨</h1>
-  <p><strong>A nostalgic, intelligent, and interactive desktop companion!</strong></p>
+
+  # ✨ Yume Nikki AI Pet ✨
+
+  **A nostalgic, intelligent, and interactive desktop companion**
+
+  ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+  ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
+  ![AI](https://img.shields.io/badge/Powered%20by-Gemini%20%7C%20Groq-8A2BE2)
+  ![License](https://img.shields.io/badge/License-MIT-green)
+
 </div>
 
 ---
 
 ## 🌟 About the Project
 
-Welcome to the **Yume Nikki AI Pet**, a passion project crafted to bring a touch of nostalgia and cutting-edge AI directly to your desktop. 
+**Yume Nikki AI Pet** is a desktop companion built to bring the mysterious, dreamlike atmosphere of the cult classic *Yume Nikki* straight to your screen. It's not just a static sprite sitting in a corner — it's a living, reacting, AI-powered buddy that watches, talks, and wanders with you while you work.
 
-Conceived as an aspiration to recreate the mysterious and beloved atmosphere of the classic indie game *Yume Nikki*, this desktop pet transcends the boundaries of typical screen companions. It isn't just a static sprite—it's a living, reacting, and conversational buddy powered by advanced AI models (Gemini & Groq)!
+Under the hood, it's driven by real conversational AI (Gemini & Groq), giving it the ability to actually understand and respond to you in character, rather than relying on canned scripted lines.
 
-**✨ Created by Data Fardeen & Amina Asghar in July 2026 ✨**
-
----
-
-## 🎮 What Can It Do?
-
-This pet is packed with features designed to make it feel alive:
-
-- **🧠 True AI Conversations:** Chat with your pet directly on your desktop! It will respond to you in character with a beautifully styled, retro-pixelated chat bubble.
-- **👁️ Screen Awareness:** If you go idle for 5 minutes, your pet gets curious! It will take a peek at your screen and give you its thoughts or reactions to whatever you left open.
-- **🎭 Dynamic Moods & Animations:** Depending on its mood (happy, sleepy, angry, musical, etc.), the pet will change its animation states and wander around your screen.
-- **🔊 Immersive Sound Effects:** From playfully poking the pet, to changing characters, to the pet pulling out its flute or getting angry—every interaction is paired with classic, nostalgic sound effects.
-- **👥 Multiple Characters:** Easily swap between fan-favorite characters like Madotsuki, Urotsuki, Sabitsuki, and Fluorette through the right-click menu.
-- **🖱️ Physics & Interaction:** You can drag the pet around your screen, double-click to play with it, and even feed it from the context menu!
+**Created by Data Fardeen & Amina Asghar — July 2026**
 
 ---
 
-## 🚀 How to Run It
+## 🎮 Features
 
-### 📦 The Easy Way (Play Instantly!)
-We've bundled everything you need into a single executable so you don't have to worry about code!
-1. Download this entire folder.
-2. Simply double-click **`Yume Nikki Pet.exe`** to start!
-3. If it's your first time, it will ask for a free Gemini or Groq API key so it can talk to you. Enter it, and enjoy!
-
-### 💻 The Developer Way (Run from Source)
-If you want to run the code directly or modify it:
-1. Ensure you have Python installed.
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the main file:
-   ```bash
-   python main.py
-   ```
-4. *(Optional)* To build the `.exe` yourself, just run `python build_and_package.py`!
+| Feature | Description |
+|---|---|
+| 🧠 **True AI Conversations** | Chat with your pet directly on your desktop through a retro-pixelated chat bubble, styled to match the game's aesthetic |
+| 👁️ **Screen Awareness** | After 5 minutes of idle time, your pet gets curious and takes a peek at your screen, reacting to whatever you have open |
+| 🎭 **Dynamic Moods & Animations** | Happy, sleepy, angry, musical, and more — moods shift the pet's animations and wandering behavior in real time |
+| 🔊 **Immersive Sound Effects** | Poking, switching characters, pulling out the flute, getting angry — every interaction has its own nostalgic sound cue |
+| 👥 **Multiple Characters** | Swap between Madotsuki, Urotsuki, Sabitsuki, and Fluorette via the right-click menu |
+| 🖱️ **Physics & Interaction** | Drag it around, double-click to play, feed it from the context menu — fully interactive |
 
 ---
 
-## 🎨 Aesthetic & Design
+## 🚀 Getting Started
 
-We specifically designed this project to capture a **"cute, retro, and pixelated"** vibe. The custom chat boxes feature terminal fonts, hot-pink borders, and soft pink backgrounds that perfectly match the aesthetic of classic 2000s RPG Maker games. 
+### 📦 Option 1 — Just Play (Recommended)
 
-Whether it's the gentle sounds of the flute or the way the pet wanders aimlessly across your windows, we hope this little companion brings a smile to your face.
+No setup, no dependencies — just run it.
+
+1. Download this repository.
+2. Double-click **`Yume Nikki Pet.exe`**.
+3. On first launch, you'll be asked for a free **Gemini** or **Groq** API key (used to power the AI conversations). Paste it in and you're good to go.
+
+### 💻 Option 2 — Run from Source
+
+For developers who want to tinker with the code:
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/Fardeen37/Yume-Nikki-Desktop-Pet.git
+cd Yume-Nikki-Desktop-Pet
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run it
+python main.py
+```
+
+Want to build your own `.exe`?
+
+```bash
+python build_and_package.py
+```
+
+---
+
+## 🎨 Design Philosophy
+
+Every visual and audio choice was made to nail a **cute, retro, pixelated** feel — terminal-style fonts, hot-pink borders, soft pink chat backgrounds, all channeling the look of classic 2000s RPG Maker horror games.
+
+From the soft notes of the flute to the pet's aimless wandering across your open windows, the goal was simple: make something small that feels alive.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python** — core application logic
+- **Gemini / Groq API** — conversational AI engine
+- **PyInstaller** — packaging into a standalone `.exe`
+
+---
+
+## 👥 Authors
+
+- **Data Fardeen** — [GitHub](https://github.com/Fardeen37) · [LinkedIn](https://linkedin.com/in/data-fardeen-234619289) · [Portfolio](https://datafardeenportfolio.netlify.app/)
+- **Amina Asghar** — [GitHub](https://github.com/Amina-Asghar) · [LinkedIn](https://linkedin.com/in/amina-asghar14nb) · [Portfolio](https://amina-asghar-portfolio.netlify.app/)
+
+---
 
 <div align="center">
-  <i>Enjoy your new desktop friend! 💖</i>
+  <i>Enjoy your new desktop friend 💖</i>
 </div>
