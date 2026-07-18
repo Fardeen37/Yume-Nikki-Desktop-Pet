@@ -39,13 +39,28 @@ Under the hood, it's driven by real conversational AI (Gemini & Groq), giving it
 
 ## 🚀 Getting Started
 
+### 🔑 Getting Your API Keys
+
+To power the AI conversations and vision capabilities, you will need a free API key from either Google Gemini or Groq (or both!):
+
+- **[Get a Gemini API Key](https://aistudio.google.com/app/apikey)** (Google AI Studio) - *Great for both chat and screen-reading vision!*
+- **[Get a Groq API Key](https://console.groq.com/keys)** (Groq Console) - *Lightning-fast chat responses!*
+
 ### 📦 Option 1 — Just Play (Recommended)
 
 No setup, no dependencies — just run it.
 
 1. Download this repository.
 2. Double-click **`Yume Nikki Pet.exe`**.
-3. On first launch, you'll be asked for a free **Gemini** or **Groq** API key (used to power the AI conversations). Paste it in and you're good to go.
+3. On first launch, you'll be asked for a free **Gemini** or **Groq** API key. Paste ONE of your keys in the prompt and you're good to go!
+
+> **Adding Both Keys Later:** 
+> The initial popup only lets you enter one API key to get started quickly. If you want to add the second key later (for example, to use Groq for fast chat and Gemini for vision), simply open the folder where the pet is located. You will find a file named `.env` that was automatically created. Open it with Notepad and add both of your keys like this:
+> 
+> ```env
+> GEMINI_API_KEY=your_gemini_key_here
+> GROQ_API_KEY=your_groq_key_here
+> ```
 
 ### 💻 Option 2 — Run from Source
 
@@ -59,7 +74,12 @@ cd Yume-Nikki-Desktop-Pet
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run it
+# 3. Create your .env file
+# Create a file named `.env` in the root folder and add your keys:
+# GEMINI_API_KEY=your_gemini_key_here
+# GROQ_API_KEY=your_groq_key_here
+
+# 4. Run it
 python main.py
 ```
 
