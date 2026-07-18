@@ -1,0 +1,7 @@
+PyQt5
+google-genai
+mss
+edge-tts
+Pillow
+python-dotenv
+groq
